@@ -268,4 +268,8 @@ h2 {
         padding-right: 8vw;
         padding-bottom: 3vh;
     }
+
+    .visible__nav{
+        display: none;
+    }
 }
