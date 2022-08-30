@@ -1,0 +1,271 @@
+:root {
+    --Dark-Gray: hsl(0, 0%, 63%);
+    --Black: hsl(0, 0%, 0%);
+    --White: hsl(0, 0%, 100%);
+    --Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+}
+
+h1 {
+    font-size: 3vw;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5vh;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 63vh 35vh;
+    margin: 0;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: 50vw 12vw 40vw;
+    grid-template-rows: 56vh 7vh;
+}
+
+.photos__back {
+    transition: 1s;
+    background-image: url(./images/desktop-image-hero-1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-column: 1;
+    grid-row: 1/3;
+    width: 90vw;
+
+}
+
+.photos__nav {
+    margin-top: 6vh;
+    margin-left: 6vw;
+}
+
+.photos__nav a {
+    margin-left: 3vw;
+    text-transform: lowercase;
+    text-decoration: none;
+    color: var(--White);
+}
+
+.all_info {
+    margin: 8vh 5vw 0 4vw;
+    grid-column: 2/4;
+}
+
+.informations p {
+    margin-top: 3vh;
+    font-weight: 500;
+    color: var(--Dark-Gray);
+    line-height: 1.6rem;
+    padding-left: 14vw;
+}
+
+.informations h1{
+    padding-left: 14vw;
+}
+
+.shop {
+    display: flex;
+    gap: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2rem;
+    margin-top: 4vh;
+    padding-left: 14vw;
+
+
+}
+
+.carrousel {
+    display: flex;
+    grid-row: 2/2;
+    grid-column: 2/2;
+}
+
+.btn__volta, .btn__avanca {
+    width: 7vw;
+    height: 7vh;
+    background-color: var(--Black);
+}
+
+.btn__volta {
+    background-image: url(./images/icon-angle-left.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn__avanca {
+    background-image: url(./images/icon-angle-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -.5rem;
+}
+
+.description {
+    display: grid;
+    grid-template-columns: 29vw 33vw 30vw;
+}
+
+.about {
+    margin: 5vh 2vw 0 2vw;
+    line-height: 1.4rem;
+
+}
+
+.about__description {
+    margin-top: 2vh;
+    color: var(--Dark-Gray);
+}
+
+.img {
+    background-size: contain;
+    object-fit: contain;
+}
+
+.visible {
+    display: none;
+    transition: 500ms;
+}
+
+.visible__menu, .visible__close {
+    display: none;
+}
+
+.attribution {
+    position: fixed;
+    bottom:0;
+    left:0;
+    text-align: center;
+}
+
+
+/* mobile */
+.fechar {
+    width: 100%;
+    height: 4vh;
+    background-color: var(--White);
+}
+
+.mobile {
+    margin-top: 4vh;
+}
+
+.mobile img {
+    margin-left: 17vw;
+}
+
+.fechar {
+    padding: 5vh;
+    margin-top: -10vh;
+}
+
+.fechar a {
+    margin-left: 5vw;
+    text-decoration: none;
+    text-transform: lowercase;
+    color: var(--Black);
+    font-weight: 600;
+}
+
+.down {
+    margin-top: 10vh;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .photos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .photos__back {
+        width: 100vw;
+        height: 29vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .photos__back img {
+        background-image: cover;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .visible__menu {
+        display: flex;
+    }
+
+    .carrousel {
+        margin-left: 83vw;
+        margin-top: -5.5vh;
+    }
+
+    .btn__volta, .btn__avanca {
+        width: 10vw;
+        height: 5vh;
+    }
+
+    .all_info {
+        margin-top: 6vh;
+        margin-right: 0;
+    }
+
+    .informations {
+        padding-left: 2vw;
+        padding-right: 8vw;
+    }
+
+    .informations p{
+        padding-left: 0;
+    }
+
+    .informations h1{
+        padding-left: 0;
+    }
+
+    .shop {
+        margin-bottom: 7vh;
+        margin-left: 2vw;
+        padding-left: 0;
+    }
+
+    .img img{
+        background-size: contain;
+        background-position: center;
+        width: 100vw;
+    }
+
+    .about{
+        padding-left: 2vw;
+        padding-right: 8vw;
+        padding-bottom: 3vh;
+    }
+}
