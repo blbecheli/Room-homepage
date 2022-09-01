@@ -16,4 +16,8 @@
 
 .prettierignore
 
-/design
+design
+.README-template
+.style-guide
+
+
